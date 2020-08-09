@@ -1,0 +1,3 @@
+# Project exclude paths
+/junit/target/
+/spring/target/

@@ -2,8 +2,8 @@ package ru.malychev.spring;
 
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.junit.contrib.java.lang.system.SystemOutRule;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -20,8 +20,20 @@ public class CDPlayerTest {
     @Autowired
     private CompactDisk cd;
 
+    @Autowired
+    private MediaPlayer player;
+
     @Test
     public void cdShouldNotBeNull() {
         assertNotNull(cd);
+    }
+
+    @Test
+    public void testPlay() {
+        player.play();
+        assertEquals(
+                "Playing Sgt. Pepper's Lonely Hearts Club Band" +
+                        " by The Beatles\n",
+                log.getLog());
     }
 }

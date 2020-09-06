@@ -2,10 +2,10 @@ package ru.malychev.spring;
 
 import org.springframework.stereotype.Component;
 
-@Component("lonelyHeartsClub")
-public class SgtPeppers implements CompactDisk {
+@Component("whiteAlbum")
+public class WhiteAlbum implements CompactDisk {
 
-    private final String title = "Sgt. Pepper's Lonely Hearts Club Band";
+    private final String title = "White Album";
     private final String artist = "The Beatles";
 
     @Override
